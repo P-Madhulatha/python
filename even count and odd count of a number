@@ -1,0 +1,13 @@
+#counting even and odd count
+def count_digits(n):
+    ec,oc=0,0
+    while n:
+        a=n%10
+        n//=10
+        if a%2==0:
+            ec+=1
+        else:
+            oc+=1
+    print(ec,oc)
+n=int(input())
+count_digits(n)
