@@ -1,0 +1,15 @@
+#smallest and largest digit
+def count_digits(n):
+    mini=9
+    maxi=0
+    while n:
+        a=n%10
+        n//=10
+        if a<mini:
+            mini=a
+        elif a>maxi:
+            maxi=a
+    print(mini,maxi)      
+            
+n=int(input())
+count_digits(n)
