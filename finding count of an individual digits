@@ -1,0 +1,13 @@
+#finding count of a individual digits
+"""
+sample i/p:1254  sample o/p:4
+"""
+def count_digits(n):
+    c=0
+    while n:
+        a=n%10
+        n//=10
+        c+=1
+    return c
+n=int(input())
+print(count_digits(n))
