@@ -1,0 +1,25 @@
+#find whether the number is even and odd(individual digits)
+"""
+smaple i/p:2468 sample o/p:even
+            1357           odd
+            1234           even & odd
+"""
+def evenodd(n):
+    ec,oc=0,0
+    while n:
+        a=n%10
+        n//=10
+        if a%2==0:
+            ec+=1
+        else:
+            oc+=1
+    if ec==0:
+        res='odd'
+    elif oc==0:
+        res='even'
+    else:
+        res='mixed'
+    return res
+n=int(input())
+print(evenodd(n))
+        
