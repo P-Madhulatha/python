@@ -23,3 +23,16 @@ def evenodd(n):
 n=int(input())
 print(evenodd(n))
         
+#another method
+def evenodd(n):
+    num=n
+    while n:
+       d=n%10
+       n//=10
+       if (num%2 and d%2==0) or (num%2==0 and d%2):
+           return "mixed"
+    if num%2==0:
+        return "even"
+    return "odd"
+n=int(input())
+print(evenodd(n))
