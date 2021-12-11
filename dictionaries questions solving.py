@@ -13,15 +13,12 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
 for k,v in dic.items():
     if v==2:
         print(k,end=" ")
@@ -34,15 +31,12 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
 for k,v in dic.items():
     if v==1:
         print(k,end=" ")
@@ -56,15 +50,12 @@ data2=list(map(int,input().split()))
 c=0
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
 for k,v in dic.items():
     if v==2:
         c+=1
@@ -79,15 +70,12 @@ data2=list(map(int,input().split()))
 nc=0
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
 for k,v in dic.items():
     if v==1 and v!=0:
         nc+=1
@@ -101,20 +89,17 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+s=0
 for k,v in dic.items():
     if v==2:
-        a.append(k)
-print(sum(a))
+        s+=k
+        print(s)
 """
 #6)sum of non-common elements in two lists
 """
@@ -124,20 +109,17 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+s=0
 for k,v in dic.items():
     if v==1:
-        a.append(k)
-print(sum(a))
+        s+=k
+        print(s) 
 """
 #7)difference of sum of common and non-common elements in two lists
 """
@@ -147,25 +129,19 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
-b=[]
+s1,s2=0,0
 for k,v in dic.items():
     if v==2:
-        a.append(k)
-        c=sum(a)
+        s1+=k
     if v==1:
-        b.append(k)
-        nc=sum(b)
-print(abs(c-nc))
+        s2+=k
+print(abs(s1-s2))
 """
 #8)maximum elements of a common elements from  two lists
 """
@@ -175,20 +151,18 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+m=0
 for k,v in dic.items():
     if v==2:
-        a.append(k)
-print(max(a))
+        if m<k:
+            m=k
+print(m)
 """
 #9)minimum elements of a common elements from  two lists
 """
@@ -198,20 +172,18 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+m=10**3
 for k,v in dic.items():
     if v==2:
-        a.append(k)
-print(min(a))
+        if m>k:
+            m=k
+print(m)
 """
 #10)maximum elements of a non-common elements from  two lists
 """
@@ -221,20 +193,18 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+m=0
 for k,v in dic.items():
     if v==1:
-        a.append(k)
-print(max(a))
+        if m<k:
+            m=k
+print(m)
 """
 #11)minimum elements of a common elements from a two lists
 n=int(input())
@@ -243,17 +213,15 @@ m=int(input())
 data2=list(map(int,input().split()))
 dic={}
 for i in data1:
+    dic[i]=1
+for i in data2:
     if i not in dic:
         dic[i]=1
     else:
         dic[i]+=1
-for j in data2:
-    if j not in dic:
-        dic[j]=1
-    else:
-        dic[j]+=1
-a=[]
+m=10**3
 for k,v in dic.items():
     if v==1:
-        a.append(k)
-print(min(a))
+        if m>k:
+            m=k
+print(m)
